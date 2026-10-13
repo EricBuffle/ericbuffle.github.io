@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eric Buffle, MD, PhD | Cardiologist and clinician-scientist</title>
+<meta name="description" content="Eric Buffle, MD, PhD, PD, FESC. Cardiologist and internist, clinician-scientist in clinical and translational cardiac imaging, based in Paris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F4F7F6;
+  --surface: #FFFFFF;
+  --ink: #16302A;
+  --muted: #4E635C;
+  --line: #D3E0DA;
+  --accent: #1F7A5C;
+  --accent-ink: #FFFFFF;
+  --focus: #E0A43A;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101C19; --surface: #172723; --ink: #E6EFEB; --muted: #A3B8B0;
+    --line: #29403A; --accent: #6FCFA8; --accent-ink: #0E1F1A; --focus: #E0A43A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101C19; --surface: #172723; --ink: #E6EFEB; --muted: #A3B8B0;
+  --line: #29403A; --accent: #6FCFA8; --accent-ink: #0E1F1A; --focus: #E0A43A;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem; line-height: 1.6;
+}
+h1, h2, h3 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.15; margin: 0; }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+header { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.mark { font-family: "Newsreader", Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+nav a { color: var(--ink); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: start; padding: 4rem 0 3.5rem; }
+.hero h1 { font-size: clamp(2.75rem, 7vw, 4.75rem); letter-spacing: -0.015em; }
+.creds { font-size: 1.15rem; color: var(--muted); margin: 0.4rem 0 0; letter-spacing: 0.02em; }
+.role { font-family: "Newsreader", Georgia, serif; font-size: 1.5rem; color: var(--accent); margin: 1.25rem 0 1rem; line-height: 1.3; }
+.hero p.intro { max-width: 34rem; color: var(--muted); font-size: 1.1rem; margin: 0; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.75rem; }
+.card h2 { font-size: 1.35rem; margin-bottom: 1rem; }
+.card dl { margin: 0 0 1.5rem; display: grid; gap: 0.9rem; }
+.card dt { font-weight: 700; }
+.card dd { margin: 0; color: var(--muted); }
+.btn {
+  display: inline-block; background: var(--accent); color: var(--accent-ink);
+  padding: 0.8rem 1.4rem; border-radius: 999px; text-decoration: none; font-weight: 700;
+}
+.btn:hover { filter: brightness(1.08); }
+
+section.block { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+section.block h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+.focus { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.focus h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.focus p { margin: 0 0 0.5rem; color: var(--muted); }
+.focus .where { font-size: 0.95rem; color: var(--ink); }
+
+.timeline { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
+.timeline li { display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.timeline .yr { color: var(--accent); font-weight: 700; }
+.timeline strong { display: block; }
+.timeline span.org { color: var(--muted); }
+.timeline p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.97rem; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.two h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { padding: 0.65rem 0; border-bottom: 1px solid var(--line); }
+.list span { display: block; color: var(--muted); font-size: 0.95rem; }
+
+.contact p { max-width: 34rem; margin: 0 0 1.5rem; color: var(--muted); }
+
+footer { padding: 2rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  .hero, .two, .focus { grid-template-columns: 1fr; gap: 2rem; }
+  .hero { padding-top: 2.5rem; }
+  .timeline li { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Eric Buffle</a>
+    <nav aria-label="Main">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#qualifications">Qualifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Eric Buffle</h1>
+      <p class="creds">MD, PhD, PD, FESC</p>
+      <p class="role">Cardiologist and internist. Clinician-scientist in clinical and translational cardiac imaging.</p>
+      <p class="intro">Trained in cardiology in Geneva and Bern, I now work in Paris, combining clinical cardiac imaging with research on new ultrasound methods to measure blood flow in valvular heart disease.</p>
+    </div>
+    <aside class="card" aria-labelledby="glance-title">
+      <h2 id="glance-title">At a glance</h2>
+      <dl>
+        <div><dt>Based in</dt><dd>Paris, France</dd></div>
+        <div><dt>Specialties</dt><dd>Cardiology, Internal Medicine</dd></div>
+        <div><dt>Imaging</dt><dd>Echocardiography (TTE and TEE), cardiac magnetic resonance</dd></div>
+        <div><dt>Currently</dt><dd>Hôpital Européen Georges Pompidou and Physics for Medicine Paris</dd></div>
+      </dl>
+      <a class="btn" href="https://www.linkedin.com/in/ericbuffle">View LinkedIn profile</a>
+    </aside>
+  </div>
+
+  <section class="block" id="research" aria-labelledby="research-title">
+    <div class="wrap">
+      <h2 id="research-title">Research focus</h2>
+      <div class="focus">
+        <div>
+          <h3>Ultrasound flow quantification</h3>
+          <p>Developing ultrasound technologies to quantify blood flow, applied to valvular heart disease.</p>
+          <p class="where">Physics for Medicine Paris, ESPCI Paris – PSL. Supported by the Swiss National Science Foundation.</p>
+        </div>
+        <div>
+          <h3>Cardiac magnetic resonance</h3>
+          <p>Clinical fellowship in cardiac MR within a radiology department.</p>
+          <p class="where">Hôpital Européen Georges Pompidou, Paris.</p>
+        </div>
+        <div>
+          <h3>Translational echocardiography</h3>
+          <p>Doctoral research bringing echocardiography methods from the lab to clinical practice.</p>
+          <p class="where">PhD, Insel Gruppe, Bern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <h2 id="experience-title">Experience</h2>
+      <ol class="timeline">
+        <li><span class="yr">2023 – present</span><div><strong>Medical Doctor, cardiac MR fellowship</strong><span class="org">Radiology, Hôpital Européen Georges Pompidou, Paris</span></div></li>
+        <li><span class="yr">2023 – present</span><div><strong>Postdoctoral Researcher</strong><span class="org">Physics for Medicine Paris and ESPCI Paris – PSL</span><p>Funded by the Swiss National Science Foundation (SNSF).</p></div></li>
+        <li><span class="yr">2022 – 2023</span><div><strong>Chief Resident (Oberarzt)</strong><span class="org">Department of Cardiology, Inselspital, Bern</span></div></li>
+        <li><span class="yr">2018 – 2022</span><div><strong>PhD in Translational Echocardiography</strong><span class="org">Insel Gruppe, Bern</span></div></li>
+        <li><span class="yr">2015 – 2022</span><div><strong>Resident</strong><span class="org">Insel Gruppe, Bern</span></div></li>
+        <li><span class="yr">2012 – 2015</span><div><strong>Resident</strong><span class="org">Hôpitaux Universitaires de Genève (HUG), Geneva</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="qualifications" aria-labelledby="qual-title">
+    <div class="wrap">
+      <h2 id="qual-title">Qualifications</h2>
+      <div class="two">
+        <div>
+          <h3>Education and board certification</h3>
+          <ul class="list">
+            <li>Doctor of Medicine (MD)<span>University of Geneva</span></li>
+            <li>PhD in Translational Echocardiography<span>Bern</span></li>
+            <li>FMH Board Certification in Cardiology<span>FMH Kardiologie, Switzerland</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Imaging certifications</h3>
+          <ul class="list">
+            <li>EACVI Adult Transthoracic Echocardiography<span>European Association of Cardiovascular Imaging</span></li>
+            <li>EACVI Adult Transesophageal Echocardiography<span>European Association of Cardiovascular Imaging</span></li>
+          </ul>
+          <h3 style="margin-top:2rem">Further training</h3>
+          <ul class="list">
+            <li>Mathematics for Machine Learning: Linear Algebra</li>
+            <li>Introduction to programming in C++</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Contact</h2>
+      <p>For research collaborations, speaking invitations or professional enquiries, get in touch on LinkedIn.</p>
+      <a class="btn" href="https://www.linkedin.com/in/ericbuffle">Message on LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Eric Buffle</div>
+</footer>
+
+<script>
+  try { document.getElementById('y').textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
